@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Unbounded", sans-serif;
+}
+
+:root {
+  --primary_color: #0d1b3e;
+  --white_color: #ffffff;
+}
+
+/* --------Floating Navbar----------- */
+/* navbar container */
+.navbar_sec {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 30px;
+  border-radius: 50px;
+  overflow: hidden; /* needed for pseudo-elements */
+  z-index: 1000;
+
+  /* base border + transition for other props */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.45s ease, box-shadow 0.45s ease;
+}
+
+/* place content above the pseudo overlays */
+.nav-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* white glass overlay (visible by default) */
+.navbar_sec::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  opacity: 1;
+  transition: opacity 0.45s ease;
+}
+
+/* black glass overlay (hidden by default, fades in when scrolled) */
+.navbar_sec::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+/* scrolled state: fade white out and black in, adjust border/shadow too */
+.navbar_sec.scrolled::before {
+  opacity: 0;
+}
+.navbar_sec.scrolled::after {
+  opacity: 1;
+}
+
+.navbar_sec.scrolled {
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* optional: make link colours and transitions smooth */
+.nav_links a {
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* If you want different link colors on scrolled state, override here:
+   e.g. keep links light on black glass, or change as you prefer. */
+.navbar_sec.scrolled .nav_links a {
+  color: #ffffff;
+}
+
+.navbar_sec .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.navbar_sec .nav-center {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.navbar_sec .logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar_sec .logo img {
+  height: 70px;
+}
+.nav_links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+}
+/* Base state */
+.nav_links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  padding: 10px 0;
+  opacity: 1;
+  letter-spacing: 0.5px;
+}
+/* Active link */
+.nav_links a.active {
+  color: #fff;
+  opacity: 1 !important; /* fully visible */
+  text-shadow: 0 0 6px #ffffff7e !important;
+}
+/* While hovering on the nav container, fade others */
+.nav_links:hover a {
+  opacity: 0.7; /* dim all links */
+}
+.nav_links:hover a:hover {
+  opacity: 1; /* hovered one brighter */
+  text-shadow: 0 0 6px #ffffff7e;
+}
+/* Dropdown */
+.navbar_sec .dropdown {
+  position: relative;
+}
+.navbar_sec .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(26, 26, 26, 0.95);
+  border-radius: 10px;
+  list-style: none;
+  padding: 10px 0;
+  margin-top: 8px;
+  min-width: 180px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: max-content;
+}
+.navbar_sec .dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.navbar_sec .dropdown-menu li a:hover {
+  background: #333;
+  color: #fff;
+}
+/* Show on hover for desktop */
+.navbar_sec .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.navbar_sec .dropdown:hover > a {
+  opacity: 1;
+  text-shadow: 0 0 6px #ffffff7e;
+}
+/* Mobile dropdown - always inside nav */
+@media (max-width: 768px) {
+  .navbar_sec .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+  .navbar_sec .dropdown-menu li a {
+    padding: 10px 15px;
+  }
+  /* Expandable dropdown */
+  .dropdown.active .navbar_sec .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* Auth buttons */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.auth-btn {
+  position: relative;
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+  background: #ffffff;
+  color: #000000;
+  white-space: nowrap;
+}
+.mobile-auth-buttons {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+.auth-btn:hover {
+  background: #f0f0f0e6;
+}
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* Responsive Navbar CSS */
+@media (max-width: 768px) {
+  .navbar_sec {
+    top: 15px;
+    padding: 10px 20px;
+    width: calc(100% - 30px);
+    max-width: 500px;
+  }
+  .navbar_sec .nav-container {
+    justify-content: space-between;
+    gap: 0;
+  }
+  .navbar_sec .nav-center {
+    gap: 20px;
+  }
+  .nav_links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 26, 0.95);
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+    gap: 15px;
+  }
+  .nav_links.active {
+    display: flex;
+  }
+  .navbar_sec .auth-buttons {
+    display: none;
+  }
+  .navbar_sec .mobile-auth-buttons {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navbar_sec .mobile-auth-buttons .auth-btn {
+    width: 100%;
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .navbar_sec .logo img {
+    height: 55px;
+  }
+  .navbar_sec {
+    padding: 8px 15px;
+  }
+  .navbar_sec .logo {
+    font-size: 1.3rem;
+  }
+}
+
+/* -----------Main Section----------- */
+.flex_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_sec {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+/* -----------Home Section----------- */
+.home_section {
+  background: linear-gradient(45deg, black, var(--primary_color));
+}
+.home_section h1 {
+  color: var(--white_color);
+  font-size: 5rem;
+  line-height: 4.8rem;
+  margin-top: 80px;
+}
+.home_section .sub_head {
+  color: #909090;
+  font-size: 2rem;
+  font-family: "Nova Square", sans-serif;
+}
+.home_section .sub_para {
+  color: var(--white_color);
+  font-size: 1rem;
+  margin: 40px 0 30px;
+}
+
+@media (max-width: 768px) {
+  .home_section h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .home_section .sub_head {
+    font-size: 1.5rem;
+  }
+  .home_section .sub_para {
+    font-size: 1rem;
+    margin: 30px 0 30px;
+  }
+}
+@media (max-width: 480px) {
+  .home_section h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-top: 50px;
+  }
+  .home_section .sub_head {
+    font-size: 1.2rem;
+  }
+  .home_section .sub_para {
+    font-size: 0.8rem;
+    margin: 25px 0 30px;
+  }
+}
+
+/* -----------Home Section----------- */
+.about_section {
+  background: var(--white_color);
+}
+.about_section p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--primary_color);
+}
+.splitText {
+  display: block;
+  line-height: 1.6; /* Adjust for nice line spacing */
+  max-width: 100%;
+}
+/* Each line must be block and hidden for animation */
+.split-line {
+  display: block;
+  overflow: hidden;
+}

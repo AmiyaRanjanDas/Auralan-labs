@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auralan Labs</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png" />
+
+    <!-- -------google font------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Nova+Square&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- -------Bootstrap CSS CDN------- -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <!-- --------style css cdn-------- -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Floating Navbar -->
+    <nav class="navbar_sec">
+      <div class="nav-container">
+        <a href="#home" class="logo">
+          <img src="./images/logo.png" alt="" />
+        </a>
+        <div class="nav-center">
+          <ul class="nav_links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li class="dropdown">
+              <a href="#ventures">Our&nbsp;Ventures</a>
+              <ul class="dropdown-menu">
+                <li><a href="#web-dev">Web Development</a></li>
+                <li><a href="#design">UI/UX Design</a></li>
+              </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="mobile-auth-buttons">
+              <a href="#" class="auth-btn">Book a call</a>
+            </li>
+          </ul>
+        </div>
+        <div class="auth-buttons">
+          <a href="#" class="auth-btn">Book a call</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home_section main_sec flex_box">
+      <div class="container">
+        <div class="text-center">
+          <h1>Auralan Labs</h1>
+          <p class="sub_head">We Build the Future of Customer</p>
+          <p class="sub_para">
+            We are an applied AI lab creating new ways for businesses to connect
+            with their customers. Our ventures redefine the conversational and
+            immersive experience.
+          </p>
+          <div class="home_sec_btn">
+            <a href="#" class="auth-btn">Book a call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about_section main_sec flex_box">
+      <div class="container">
+        <p class="splitText">
+          Our mission is to bridge the gap between human potential and
+          artificial intelligence. We believe the future of business will be
+          defined by the quality of customer interaction. We build the
+          AI-powered tools—both conversational and visual—to make those
+          interactions more intelligent, personal, and effective
+        </p>
+      </div>
+    </section>
+
+    <!-- -------GSAP CDN------- -->
+     <script src="./assets/js/SplitText3.min.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
