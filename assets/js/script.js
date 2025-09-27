@@ -93,29 +93,48 @@ TweenMax.staggerFrom(
 // Make sure GSAP + SplitText + ScrollTrigger are loaded
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-document.querySelectorAll(".splitText").forEach((el) => {
-  // Split the paragraph by lines
-  const outerSplit = new SplitText(el, { type: "lines", linesClass: "split-line" });
-  const innerSplit = new SplitText(outerSplit.lines, { type: "lines" });
+window.addEventListener("load", () => { // wait for full render
+  document.querySelectorAll(".splitText").forEach((el) => {
+    // Get the container width
+    const container = el.closest(".container");
+    const containerWidth = container.getBoundingClientRect().width;
 
-  // Timeline
-  const tl = gsap.timeline({ paused: true })
-    .set(outerSplit.lines, { overflow: "hidden" })
-    .from(innerSplit.lines, {
-      yPercent: 100,
-      opacity: 0,
-      duration: 1.2,
-      stagger: 0.12,
-      ease: "expo.out"
+    // Set paragraph width to container width
+    el.style.width = containerWidth + "px";
+
+    // Split text by lines
+    const outerSplit = new SplitText(el, { type: "lines", linesClass: "split-line" });
+    const innerSplit = new SplitText(outerSplit.lines, { type: "lines" });
+
+    const tl = gsap.timeline({ paused: true })
+      .set(outerSplit.lines, { overflow: "hidden" })
+      .from(innerSplit.lines, {
+        yPercent: 100,
+        opacity: 0,
+        duration: 1.5,
+        stagger: 0.12,
+        ease: "expo.out"
+      });
+
+    ScrollTrigger.create({
+      trigger: el,
+      start: "top 80%",
+      end: "bottom 20%",
+      animation: tl,
+      toggleActions: "play reverse play reverse"
     });
 
-  // ScrollTrigger: animate on scroll and replay on scroll up
-  ScrollTrigger.create({
-    trigger: el,
-    start: "top 80%",
-    end: "bottom 20%",
-    animation: tl,
-    toggleActions: "play reverse play reverse"
+    // Optional: recalc on window resize
+    window.addEventListener("resize", () => {
+      const newWidth = container.getBoundingClientRect().width;
+      el.style.width = newWidth + "px";
+      outerSplit.revert();
+      innerSplit.revert();
+      // reinitialize
+      const outerSplitNew = new SplitText(el, { type: "lines", linesClass: "split-line" });
+      const innerSplitNew = new SplitText(outerSplitNew.lines, { type: "lines" });
+    });
   });
 });
+
 
