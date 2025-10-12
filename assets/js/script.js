@@ -138,3 +138,50 @@ window.addEventListener("load", () => { // wait for full render
 });
 
 
+// for text circle spinning----
+const text1 = document.querySelector(".about_section .text");
+text1.innerHTML = text1.innerText
+  .split("")
+  .map(
+    (char, i) => `<span style="transform:rotate(${i * 8.2}deg)">${char}</span>`
+  )
+  .join("");
+
+
+
+// ------------------Philosphy Section------------------
+// for text circle spinning----
+const text2 = document.querySelector(".philosophy_section .text");
+text2.innerHTML = text2.innerText
+  .split("")
+  .map(
+    (char, i) => `<span style="transform:rotate(${i * 7.2}deg)">${char}</span>`
+  )
+  .join("");
+
+
+
+// ------------------Accordian Section------------------
+
+let elements = document.querySelectorAll(".fLink");
+elements.forEach((element) => {
+  let innerText = element.innerText;
+  element.innerHTML = "";
+
+  let textContainer = document.createElement("div");
+  textContainer.classList.add("blocks");
+
+  for (let letter of innerText) {
+    let span = document.createElement("span");
+    span.innerText = letter.trim() === "" ? "\xa0" : letter;
+    span.classList.add("letter");
+    textContainer.appendChild(span);
+  }
+  element.appendChild(textContainer);
+  element.appendChild(textContainer.cloneNode(true));
+});
+elements.forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    element.classList.remove("play");
+  });
+});
