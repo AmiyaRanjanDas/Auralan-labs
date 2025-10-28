@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Nova+Square&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap"
       rel="stylesheet"
     />
     <!-- -------Bootstrap CSS CDN------- -->
@@ -32,9 +32,9 @@
     <!-- Floating Navbar -->
     <nav class="navbar_sec">
       <div class="nav-container">
-        <a href="#home_sec" class="logo">
+        <!-- <a href="#home_sec" class="logo">
           <img src="./images/logo.png" alt="" />
-        </a>
+        </a> -->
         <div class="nav-center">
           <ul class="nav_links" id="navLinks">
             <li><a href="#home_sec" class="active">Home</a></li>
@@ -59,11 +59,19 @@
       </div>
     </nav>
 
+    <!-- Intro Section -->
+    <div id="intro">
+      <h1 id="company-name">
+        AURALAN LABS
+        <div id="loading-bar"></div>
+      </h1>
+    </div>
+
     <!-- Home Section -->
     <section class="home_section main_sec flex_box" id="home_sec">
       <div class="container">
         <div class="text-center main_div">
-          <h1>Auralan Labs</h1>
+          <h1>AURALAN LABS</h1>
           <p class="sub_head">We Build the Future of Customer</p>
           <p class="sub_para">
             We are an applied AI lab creating new ways for businesses to connect
@@ -71,11 +79,27 @@
             immersive experience.
           </p>
           <div class="home_sec_btn">
-            <a href="#" class="auth-btn">Book a call</a>
+            <a href="#" class="auth-btn">
+              <span>Book a call</span>
+              <span class="call_btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#FFF"
+                >
+                  <path
+                    d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
+                  /></svg
+              ></span>
+            </a>
           </div>
         </div>
-        <!-- <spline-viewer class="spline_model"
-        url="https://prod.spline.design/xy-b2DcLVBDMgC8H/scene.splinecode"></spline-viewer> -->
+        <spline-viewer
+          class="spline_model"
+          url="https://prod.spline.design/xy-b2DcLVBDMgC8H/scene.splinecode"
+        ></spline-viewer>
       </div>
     </section>
 
@@ -98,6 +122,38 @@
       </div>
     </section>
 
+    <!-- Philosophy Section -->
+    <div class="philosophy_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="card">
+              <img src="./images/sec_img1.png" alt="" />
+              <p>Innovation in Practice</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="card">
+              <img src="./images/sec_img2.png" alt="" />
+              <p>Human-Centric AI</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./images/sec_img3.png" alt="" />
+              <p>Building for Scale</p>
+            </div>
+          </div>
+        </div>
+        <!-- ----spinning cicle---- -->
+        <div class="spinning_circle">
+          <div class="text">
+            <p>Us are Auralan Labs - Us are Auralan Labs -</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Venture Section -->
     <section class="venture_section" id="venture_sec">
       <div class="container">
@@ -109,7 +165,7 @@
           </p>
         </div>
         <div class="row">
-          <div class="col-md-6 mb-5 mb-md-0">
+          <div class="col-md-6 mb-4 mb-md-0">
             <div class="card" id="venture_1">
               <div class="content">
                 <h5>Your AI Calling Venture Name</h5>
@@ -151,7 +207,7 @@
           </p>
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 mb-3 mb-md-0">
             <div class="card">
               <p class="content">
                 "Year One took our brand to new heights with their innovative
@@ -162,8 +218,7 @@
               <p class="desg">CEO of Bright Ideas Co.</p>
             </div>
           </div>
-
-          <div class="col-md-4">
+          <div class="col-md-4 mb-3 mb-md-0">
             <div class="card">
               <p class="content">
                 "Working with Year One was a game-changer for our business.
@@ -174,7 +229,7 @@
               <p class="desg">Founder of Tech Trends Inc.</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 mb-3 mb-md-0">
             <div class="card">
               <p class="content">
                 "Year One's content creation services exceeded our expectations.
@@ -184,38 +239,6 @@
               <p class="name">David Brown</p>
               <p class="desg">HR Manager at Sparkle</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Philosophy Section -->
-    <div class="philosophy_section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card">
-              <img src="./images/sec_img1.png" alt="" />
-              <p>Innovation in Practice</p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card">
-              <img src="./images/sec_img2.png" alt="" />
-              <p>Human-Centric AI</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="./images/sec_img3.png" alt="" />
-              <p>Building for Scale</p>
-            </div>
-          </div>
-        </div>
-        <!-- ----spinning cicle---- -->
-        <div class="spinning_circle">
-          <div class="text">
-            <p>Our Philosophy - Our Philosophy - Our Philosophy -</p>
           </div>
         </div>
       </div>
@@ -332,8 +355,8 @@
       </div>
       <div class="main_contact">
         <div class="row">
-          <div class="col-md-4">
-            <p>Subscribe to our newsletter</p>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <p class="mb-2 mb-md-3">Subscribe to our newsletter</p>
             <div class="form_box">
               <input
                 type="email"
@@ -344,7 +367,7 @@
               <a href="#" class="auth-btn">Book a call</a>
             </div>
           </div>
-          <div class="col-md-3 flex_box">
+          <div class="col-md-3 mb-4 mb-md-0 flex_box">
             <div class="linkz">
               <h6>Menu</h6>
               <p><a href="#">Home</a></p>
@@ -361,7 +384,7 @@
               <p><a href="#">Instagram</a></p>
             </div>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 d-none d-md-block">
             <div class="btn_box">
               <a href="#home_sec">
                 <i class="fa fa-chevron-up"></i>
@@ -371,10 +394,11 @@
         </div>
       </div>
       <div class="copyright">
-        <p>© Aura lan Labs 2025. </p>
+        <p>© Aura lan Labs 2025.</p>
         <p>All rights reserved</p>
       </div>
     </div>
+
     <!-- -------GSAP CDN------- -->
     <script src="./assets/js/SplitText3.min.js"></script>
     <script src="./assets/js/gsap.min.js"></script>

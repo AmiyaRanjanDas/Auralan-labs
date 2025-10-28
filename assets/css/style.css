@@ -2,20 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Unbounded", sans-serif;
-}
-
 :root {
   --primary_color: #0d1b3e;
   --white_color: #ffffff;
-  --subhead-color: #909090;
+  --subhead-color: #949494;
+  --subhead-color-2: #bababa;
 }
 
 /* --------Floating Navbar----------- */
@@ -27,21 +25,16 @@ body {
   transform: translateX(-50%);
   padding: 12px 30px;
   border-radius: 50px;
-  /* overflow: hidden; needed for pseudo-elements */
   z-index: 1000;
-
   /* base border + transition for other props */
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: border-color 0.45s ease, box-shadow 0.45s ease;
 }
-
-/* place content above the pseudo overlays */
 .nav-container {
   position: relative;
   z-index: 1;
 }
-
 /* white glass overlay (visible by default) */
 .navbar_sec::before {
   content: "";
@@ -59,7 +52,6 @@ body {
   opacity: 1;
   transition: opacity 0.45s ease;
 }
-
 /* black glass overlay (hidden by default, fades in when scrolled) */
 .navbar_sec::after {
   content: "";
@@ -75,7 +67,6 @@ body {
   opacity: 0;
   transition: opacity 0.45s ease;
 }
-
 /* scrolled state: fade white out and black in, adjust border/shadow too */
 .navbar_sec.scrolled::before {
   opacity: 0;
@@ -368,7 +359,7 @@ body {
 .main_head p {
   color: var(--subhead-color);
   font-size: 1rem;
-  font-family: "Nova Square", sans-serif;
+  font-family: "Alan Sans", sans-serif;
   width: 70%;
   margin: auto;
   margin-bottom: 50px;
@@ -380,8 +371,11 @@ body {
   }
 }
 @media only screen and (max-width: 500px) {
+  .main_head h4 {
+    font-size: 2.2rem;
+  }
   .main_head p {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 100%;
   }
 }
@@ -403,7 +397,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  font-family: "Nova Square", sans-serif;
+  font-family: "Alan Sans", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1em;
@@ -430,6 +424,46 @@ body {
   }
 }
 
+/* -----------Intro Section----------- */
+#intro {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+#company-name {
+  color: white;
+  font-size: 4rem;
+  letter-spacing: 6px;
+}
+#loading-bar {
+  margin-top: 20px;
+  width: 10%;
+  height: 4px;
+  background: linear-gradient(90deg, white, white, rgb(0, 0, 0));
+  border-radius: 4px;
+  box-shadow: 0 0 15px var(--primary_color);
+}
+@media (max-width: 768px) {
+  #company-name {
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+}
+@media (max-width: 480px) {
+  #company-name {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  #loading-bar {
+    margin-top: 3px;
+    height: 2.5px;
+  }
+}
 /* -----------Home Section----------- */
 .home_section {
   background: linear-gradient(45deg, black, var(--primary_color));
@@ -452,31 +486,69 @@ body {
 .home_section h1 {
   color: var(--white_color);
   font-size: 5rem;
-  line-height: 4.8rem;
+  line-height: 4.2rem;
   margin-top: 80px;
+  font-weight: 600;
+  letter-spacing: 3px;
 }
 
 .home_section .sub_head {
-  color: var(--subhead-color);
+  color: var(--white_color);
   font-size: 2rem;
-  font-family: "Nova Square", sans-serif;
+  font-family: "Alan Sans", sans-serif;
 }
 
 .home_section .sub_para {
-  color: var(--white_color);
-  font-size: 1rem;
-  margin: 40px 0 30px;
+  color: var(--subhead-color);
+  font-size: 1.1rem;
+  width: 75%;
+  margin: 20px auto 25px;
+  font-family: "Alan Sans", sans-serif;
 }
 .home_section .auth-btn {
-  padding: 12px 80px;
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  padding: 5px 5px 5px 20px;
   font-size: 1.2rem;
-  margin-top: 30px;
+}
+.home_section .auth-btn .call_btn {
+  background: linear-gradient(45deg, black, var(--primary_color));
+  padding: 10px 20px;
+  fill: white;
+  border-radius: 20px;
+}
+.home_section .auth-btn:hover .call_btn svg {
+  animation: ring-gentle 1.2s cubic-bezier(0.2, 0.9, 0.3, 1) infinite;
+}
+@keyframes ring-gentle {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  45% {
+    transform: rotate(-8deg);
+  }
+  60% {
+    transform: rotate(6deg);
+  }
+  75% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @media (max-width: 768px) {
   .home_section h1 {
     font-size: 3rem;
-    line-height: 3.5rem;
+    line-height: 3.25rem;
   }
 
   .home_section .sub_head {
@@ -485,44 +557,63 @@ body {
 
   .home_section .sub_para {
     font-size: 1rem;
-    margin: 30px 0 30px;
+    margin: 20px auto 15px;
+    width: 100%;
+  }
+  .home_section .auth-btn {
+    gap: 20px;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .home_section h1 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     line-height: 2.75rem;
     margin-top: 50px;
+    letter-spacing: 1px;
   }
 
   .home_section .sub_head {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .home_section .sub_para {
     font-size: 0.8rem;
-    margin: 25px 0 30px;
+    margin: 25px 0;
+    color: var(--subhead-color-2);
+  }
+  .home_section .auth-btn {
+    font-size: 0.9rem;
+  }
+  .home_section .auth-btn .call_btn {
+    padding: 10px 18px;
+  }
+  .home_section .auth-btn .call_btn svg {
+    width: 15px;
   }
 }
-
+.home_section h1,
+.home_section p,
+.home_sec_btn {
+  opacity: 0;
+  transform: translateY(30px);
+}
 /* -----------About Section----------- */
 .about_section {
   position: relative;
   overflow: hidden;
   background: var(--white_color);
 }
-
-.about_section p {
-  font-size: 1.5rem;
+.about_section * {
+  font-family: "Alan Sans", sans-serif !important;
+}
+.splitText {
+  font-size: 1.75rem;
   text-align: center;
   color: var(--primary_color);
-}
-
-.splitText {
   display: block;
   line-height: 1.6;
-  /* Adjust for nice line spacing */
   max-width: 100%;
 }
 
@@ -531,22 +622,86 @@ body {
   display: block;
   overflow: hidden;
 }
-
 /* spinning circle in about sec */
 .about_section .spinning_circle {
   right: -50px;
   bottom: 60px;
 }
-
 .about_section .spinning_circle .text {
   color: rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 768px) {
+  .splitText {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+}
 
+@media (max-width: 480px) {
+  .splitText {
+    font-size: 1.35rem;
+    line-height: 1.6;
+  }
+  .about_section .spinning_circle {
+    right: -80px;
+    bottom: 40px;
+  }
+}
+
+/* -----------Philosophy Section----------- */
+.philosophy_section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, black, var(--primary_color));
+  padding: 100px 0;
+}
+
+.philosophy_section .card {
+  background: none;
+  border: none;
+  color: var(--white_color);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.philosophy_section .card img {
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.philosophy_section .card img:hover {
+  transform: scale(1.05);
+}
+.philosophy_section .card p {
+  margin: 0;
+}
+/* spinning circle in philosophy sec */
+.philosophy_section .spinning_circle {
+  left: -75px;
+  bottom: -50px;
+}
+.philosophy_section .spinning_circle .text {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 480px) {
+  .philosophy_section {
+    padding: 70px 0;
+  }
+  .philosophy_section .card {
+    padding: 10px;
+  }
+  .philosophy_section .card img {
+    height: 120px;
+  }
+}
 /* -----------venture section---------- */
 .venture_section {
   padding: 100px 0 125px;
 }
-
 .venture_section .card {
   position: relative;
   overflow: hidden;
@@ -556,21 +711,18 @@ body {
   text-align: center;
   padding: 50px;
 }
-
 #venture_1 {
   background: url("../../images/img1.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 #venture_2 {
   background: url("../../images/img2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .venture_section .card::after {
   position: absolute;
   content: "";
@@ -580,35 +732,46 @@ body {
   left: 0;
   background: #0d1b3eab;
 }
-
 .venture_section .card .content {
   position: relative;
   z-index: 2;
 }
-
 .venture_section .card h5 {
   font-size: 2.5rem;
   margin: 0 0 5px;
 }
-
 .venture_section .card span {
   font-size: 1.25rem;
-  font-family: "Nova Square", sans-serif;
+  font-family: "Alan Sans", sans-serif;
 }
-
 .venture_section .card p {
-  font-size: 0.8rem;
+  color: var(--subhead-color-2);
+  font-size: 0.9rem;
   margin: 30px 0 25px;
 }
-
 .venture_section .card a {
   width: min-content;
   margin: auto;
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   .venture_section {
-    padding: 100px 0 75px;
+    padding: 70px 0;
+  }
+  .venture_section .card {
+    padding: 35px 30px;
+  }
+  .venture_section .card h5 {
+    font-size: 2rem;
+  }
+  .venture_section .card span {
+    font-size: 1.1rem;
+  }
+  .venture_section .card p {
+    margin: 20px 0;
+  }
+  .venture_section .card a {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -638,48 +801,12 @@ body {
 .partners_section .card .desg {
   text-align: right;
 }
-/* -----------Philosophy Section----------- */
-.philosophy_section {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(45deg, black, var(--primary_color));
-  padding: 100px 0;
-}
 
-.philosophy_section .card {
-  background: none;
-  border: none;
-  color: var(--white_color);
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
+@media only screen and (max-width: 480px) {
+  .partners_section {
+    padding: 50px 0 70px;
+  }
 }
-
-.philosophy_section .card img {
-  height: 150px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: 0.4s ease-in-out;
-}
-.philosophy_section .card img:hover {
-  transform: scale(1.05);
-}
-.philosophy_section .card p {
-  margin: 0;
-}
-
-/* spinning circle in philosophy sec */
-.philosophy_section .spinning_circle {
-  left: -75px;
-  bottom: -50px;
-}
-
-.philosophy_section .spinning_circle .text {
-  color: rgba(255, 255, 255, 0.2);
-}
-
 /* -------------accordian section------------- */
 .accordian_section {
   position: relative;
@@ -700,14 +827,17 @@ body {
   --bs-accordion-bg: none !important;
   --bs-accordion-border-color: none !important;
 }
-
+.accordion .accordion-body {
+  font-family: "Alan Sans", sans-serif;
+}
 .fLink {
   position: relative;
   text-decoration: none;
-  font-size: 2.8rem;
+  font-size: 2.25rem;
+  font-family: "Lato", sans-serif;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--primary_color);
-  font-family: "Nova Square", sans-serif;
+  font-weight: 600;
   color: transparent;
   overflow: hidden;
   border-bottom: 1px solid rgba(0, 0, 0, 0.381) !important;
@@ -717,7 +847,9 @@ body {
   text-align: left;
   background: none;
 }
-
+.fLink span {
+  font-family: "Lato", sans-serif;
+}
 .fLink:after {
   position: absolute;
   content: "+";
@@ -909,18 +1041,18 @@ body {
   transition-delay: 1.17s;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 480px) {
   .accordian_section {
     position: relative;
-    padding: 50px 0;
+    padding: 50px 0 70px;
   }
 
   .accordian_section .content {
-    width: 100%;
+    width: 95%;
   }
 
   .fLink {
-    font-size: 26px;
+    font-size: 1.8rem;
   }
 }
 
@@ -992,7 +1124,7 @@ body {
   padding: 6px 10px 10px;
   border-radius: 50%;
 }
-.contact_section .copyright{
+.contact_section .copyright {
   margin: 60px 50px 0;
   display: flex;
   align-items: center;
@@ -1000,4 +1132,39 @@ body {
   justify-content: space-between;
   border-top: 0.5px solid #d5d5d5;
   color: var(--subhead-color);
+}
+
+@media only screen and (max-width: 480px) {
+  .contact_section .flex_box{
+    justify-content: start;
+  }
+  .contact_section .contact_card {
+    margin: 40px 15px 0;
+    padding: 40px 30px;
+  }
+  .contact_section .contact_card h1 {
+    font-size: 2rem;
+  }
+  .contact_section .contact_card p {
+    margin: 5px 0 25px;
+    width: 100%;
+  }
+  .contact_section .contact_card .auth-btn {
+    padding: 8px 40px;
+  }
+  
+.main_contact {
+  margin:20px 15px 0;
+}
+.main_contact .linkz h6 {
+    margin-bottom: 10px;
+}
+.main_contact .linkz p {
+    margin: 0 0 5px;
+}
+.contact_section .copyright{
+      margin: 20px 15px 0;
+    
+    padding-top: 10px;
+}
 }

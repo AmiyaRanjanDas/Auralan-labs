@@ -76,24 +76,52 @@ window.addEventListener("scroll", updateNavbar);
 // Run once when page loads
 window.addEventListener("load", updateNavbar);
 
-// --------------------Home section------------------
-TweenMax.staggerFrom(
-  ".home_section h1,.home_section p,.home_sec_btn",
-  1.5,
-  {
+window.addEventListener("load", () => {
+  const tl = gsap.timeline();
+
+  // 1️⃣ Animate the loading bar
+  tl.to("#loading-bar", {
+    duration: 3,
+    width: "100%",
+    ease: "power2.inOut",
+  });
+
+  // 2️⃣ Glow effect
+  tl.to("#loading-bar", {
+    duration: 0.5,
+    boxShadow: "0 0 25px #0d1b3e",
+  });
+
+  // 3️⃣ Blur + fade out intro
+  tl.to("#intro", {
+    duration: 1,
+    filter: "blur(30px)",
     opacity: 0,
-    y: 30,
-    ease: Expo.easeInOut,
-    delay: 0,
-  },
-  0.2
-);
+    onComplete: () => {
+      document.getElementById("intro").style.display = "none";
+    },
+  });
+
+  // 4️⃣ Animate home section — start a bit *before* intro finishes
+  tl.to(
+    ".home_section h1, .home_section p, .home_sec_btn",
+    {
+      duration: 1.4,
+      autoAlpha: 1,
+      y: 0,
+      ease: "expo.inOut",
+      stagger: 0.2,
+    },
+    "-=0.6" // 🪄 starts 0.6s before previous animation ends
+  );
+});
 
 // --------------------About section------------------
 // Make sure GSAP + SplitText + ScrollTrigger are loaded
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-window.addEventListener("load", () => { // wait for full render
+window.addEventListener("load", () => {
+  // wait for full render
   document.querySelectorAll(".splitText").forEach((el) => {
     // Get the container width
     const container = el.closest(".container");
@@ -103,17 +131,21 @@ window.addEventListener("load", () => { // wait for full render
     el.style.width = containerWidth + "px";
 
     // Split text by lines
-    const outerSplit = new SplitText(el, { type: "lines", linesClass: "split-line" });
+    const outerSplit = new SplitText(el, {
+      type: "lines",
+      linesClass: "split-line",
+    });
     const innerSplit = new SplitText(outerSplit.lines, { type: "lines" });
 
-    const tl = gsap.timeline({ paused: true })
+    const tl = gsap
+      .timeline({ paused: true })
       .set(outerSplit.lines, { overflow: "hidden" })
       .from(innerSplit.lines, {
         yPercent: 100,
         opacity: 0,
         duration: 1.5,
         stagger: 0.12,
-        ease: "expo.out"
+        ease: "expo.out",
       });
 
     ScrollTrigger.create({
@@ -121,7 +153,7 @@ window.addEventListener("load", () => { // wait for full render
       start: "top 80%",
       end: "bottom 20%",
       animation: tl,
-      toggleActions: "play reverse play reverse"
+      toggleActions: "play reverse play reverse",
     });
 
     // Optional: recalc on window resize
@@ -131,12 +163,16 @@ window.addEventListener("load", () => { // wait for full render
       outerSplit.revert();
       innerSplit.revert();
       // reinitialize
-      const outerSplitNew = new SplitText(el, { type: "lines", linesClass: "split-line" });
-      const innerSplitNew = new SplitText(outerSplitNew.lines, { type: "lines" });
+      const outerSplitNew = new SplitText(el, {
+        type: "lines",
+        linesClass: "split-line",
+      });
+      const innerSplitNew = new SplitText(outerSplitNew.lines, {
+        type: "lines",
+      });
     });
   });
 });
-
 
 // for text circle spinning----
 const text1 = document.querySelector(".about_section .text");
@@ -147,19 +183,15 @@ text1.innerHTML = text1.innerText
   )
   .join("");
 
-
-
 // ------------------Philosphy Section------------------
 // for text circle spinning----
 const text2 = document.querySelector(".philosophy_section .text");
 text2.innerHTML = text2.innerText
   .split("")
   .map(
-    (char, i) => `<span style="transform:rotate(${i * 7.2}deg)">${char}</span>`
+    (char, i) => `<span style="transform:rotate(${i * 8.2}deg)">${char}</span>`
   )
   .join("");
-
-
 
 // ------------------Accordian Section------------------
 
