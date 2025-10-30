@@ -42,8 +42,8 @@
             <li class="dropdown">
               <a href="#venture_sec">Our&nbsp;Ventures</a>
               <ul class="dropdown-menu">
-                <li><a href="#web-dev">Web Development</a></li>
-                <li><a href="#design">UI/UX Design</a></li>
+                <li><a href="./AICalling.html">AI Calling Venture</a></li>
+                <li><a href="./comming.html">3D/VR Venture</a></li>
               </ul>
             </li>
             <li><a href="#contact_sec">Contact</a></li>
@@ -58,14 +58,6 @@
         <button class="menu-toggle" id="menuToggle">☰</button>
       </div>
     </nav>
-
-    <!-- Intro Section -->
-    <div id="intro">
-      <h1 id="company-name">
-        AURALAN LABS
-        <div id="loading-bar"></div>
-      </h1>
-    </div>
 
     <!-- Home Section -->
     <section class="home_section main_sec flex_box" id="home_sec">
@@ -96,10 +88,10 @@
             </a>
           </div>
         </div>
-        <spline-viewer
+        <!-- <spline-viewer
           class="spline_model"
           url="https://prod.spline.design/xy-b2DcLVBDMgC8H/scene.splinecode"
-        ></spline-viewer>
+        ></spline-viewer> -->
       </div>
     </section>
 
@@ -344,7 +336,7 @@
       </div>
     </div>
 
-    <div class="contact_section">
+    <div class="contact_section" id="contact_sec">
       <div class="contact_card">
         <h1>Let's Create<br />Your Dream Project</h1>
         <p>
@@ -400,6 +392,24 @@
     </div>
 
     <!-- -------GSAP CDN------- -->
+
+    <script>
+      function updateNavbar() {
+        const navbar = document.querySelector(".navbar_sec");
+        const firstSectionHeight =
+          document.querySelector(".home_section").offsetHeight;
+
+        if (window.scrollY >= firstSectionHeight - 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      }
+      // Run on scroll
+      window.addEventListener("scroll", updateNavbar);
+      // Run once when page loads
+      window.addEventListener("load", updateNavbar);
+    </script>
     <script src="./assets/js/SplitText3.min.js"></script>
     <script src="./assets/js/gsap.min.js"></script>
     <script src="./assets/js/ScrollTrigger.min.js"></script>

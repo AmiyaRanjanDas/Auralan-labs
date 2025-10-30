@@ -60,61 +60,23 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
-function updateNavbar() {
-  const navbar = document.querySelector(".navbar_sec");
-  const firstSectionHeight =
-    document.querySelector(".home_section").offsetHeight;
 
-  if (window.scrollY >= firstSectionHeight - 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-}
-// Run on scroll
-window.addEventListener("scroll", updateNavbar);
-// Run once when page loads
-window.addEventListener("load", updateNavbar);
 
+
+// GSAP Tween stack Animation 
 window.addEventListener("load", () => {
   const tl = gsap.timeline();
 
-  // 1️⃣ Animate the loading bar
-  tl.to("#loading-bar", {
-    duration: 3,
-    width: "100%",
-    ease: "power2.inOut",
+  // Animate home section elements
+  tl.to(".home_section h1, .home_section p, .home_sec_btn", {
+    duration: 1.4,
+    autoAlpha: 1,
+    y: 0,
+    ease: "expo.inOut",
+    stagger: 0.2,
   });
-
-  // 2️⃣ Glow effect
-  tl.to("#loading-bar", {
-    duration: 0.5,
-    boxShadow: "0 0 25px #0d1b3e",
-  });
-
-  // 3️⃣ Blur + fade out intro
-  tl.to("#intro", {
-    duration: 1,
-    filter: "blur(30px)",
-    opacity: 0,
-    onComplete: () => {
-      document.getElementById("intro").style.display = "none";
-    },
-  });
-
-  // 4️⃣ Animate home section — start a bit *before* intro finishes
-  tl.to(
-    ".home_section h1, .home_section p, .home_sec_btn",
-    {
-      duration: 1.4,
-      autoAlpha: 1,
-      y: 0,
-      ease: "expo.inOut",
-      stagger: 0.2,
-    },
-    "-=0.6" // 🪄 starts 0.6s before previous animation ends
-  );
 });
+
 
 // --------------------About section------------------
 // Make sure GSAP + SplitText + ScrollTrigger are loaded

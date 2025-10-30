@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oktivo</title>
+
+    <!-- -------google font------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- -------Bootstrap CSS CDN------- -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+    <!-- -------Font awsome CSS CDN------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- --------style css cdn-------- -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="relative min-h-screen overflow-x-hidden">
+        <!-- navbar section -->
+        <nav class="navbar_sec">
+          <div class="nav-container">
+            <!-- <a href="#home_sec" class="logo">
+          <img src="./images/logo.png" alt="" />
+        </a> -->
+            <div class="nav-center">
+              <ul class="nav_links" id="navLinks">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./index.html#about_sec">About</a></li>
+                <li class="dropdown">
+                  <a href="#">Our&nbsp;Ventures</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">AI Calling Venture</a></li>
+                    <li><a href="./comming.html">3D/VR Venture</a></li>
+                  </ul>
+                </li>
+                <li><a href="#contact_sec">Contact</a></li>
+                <li class="mobile-auth-buttons">
+                  <a href="#" class="auth-btn">Book a call</a>
+                </li>
+              </ul>
+            </div>
+            <div class="auth-buttons">
+              <a href="#" class="auth-btn">Book a call</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+          </div>
+        </nav>
+
+        <main>
+          <!-- hero section -->
+          <section
+            id="hero"
+            class="custom-bg pt-28 pb-20 md:pt-32 md:pb-24 overflow-hidden"
+          >
+            <div class="container mx-auto px-4">
+              <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <div
+                  class="md:w-1/2 space-y-5 md:space-y-8 mb-12 md:mb-0 scale-[0.9]"
+                >
+                  <h1
+                    class="text-light text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight animate-in animate-show"
+                  >
+                    <span class="block"> AI Conversations That </span>
+                    <span class="block">Start on Calls —</span>
+                    and Continue Anywhere
+                  </h1>
+                  <p
+                    class="text-lg md:text-xl sub-head-color animate-in animate-show"
+                  >
+                    An AI-powered voice agent that speaks and act like human —
+                    talks on calls, sends real-time info on WhatsApp or email,
+                    handles follow-ups over chat, and syncs seamlessly with your
+                    CRM, LMS, and website.
+                  </p>
+                  <div class="home_sec_btn">
+                    <a href="#" class="auth-btn">
+                      <span>Book a call</span>
+                      <span class="call_btn">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#FFF"
+                        >
+                          <path
+                            d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
+                          /></svg
+                      ></span>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="md:w-1/2 relative animate-in animate-show scale-[0.95]"
+                >
+                  <div
+                    class="relative rounded-xl overflow-hidden shadow-2xl border border-gray-800"
+                  >
+                    <div
+                      class="absolute inset-0 bg-gradient-to-bl from-cyan-500/10 to-violet-600/10 mix-blend-overlay"
+                    ></div>
+                    <img
+                      src="./images/img1.webp"
+                      alt="Person receiving WhatsApp message while on call"
+                      class="w-full h-auto"
+                    />
+                    <div
+                      class="absolute right-4 bottom-4 bg-black/70 backdrop-blur-sm p-3 rounded-lg border border-gray-800 max-w-[208px] animate-float"
+                    >
+                      <div class="flex items-start gap-2">
+                        <div
+                          class="w-8 h-8 bg-emerald-500 flex items-center justify-center rounded-full flex-shrink-0"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-message-square w-4 h-4 text-black"
+                          >
+                            <path
+                              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div>
+                          <p class="text-xs text-emerald-400 font-medium">
+                            Booking Confirmed!
+                          </p>
+                          <p class="text-xs text-gray-300">
+                            Your test drive is scheduled for tomorrow at 2 PM.
+                            Here's your confirmation link.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Features section -->
+          <section id="features" class="py-20 relative overflow-hidden">
+            <div
+              class="container mx-auto px-4 flex flex-col lg:flex-row gap-12 lg:gap-16 items-center"
+            >
+              <div class="lg:w-1/2 flex justify-center scale-[0.95]">
+                <div class="relative text-sm">
+                  <!-- Background glow elements -->
+                  <div
+                    class="absolute -bottom-8 -right-8 w-56 h-56 bg-cyan-500/15 rounded-full blur-[90px]"
+                  ></div>
+                  <div
+                    class="absolute -top-8 -left-8 w-56 h-56 bg-violet-600/15 rounded-full blur-[90px]"
+                  ></div>
+
+                  <!-- Phone mockup -->
+                  <div
+                    class="relative mx-auto w-[220px] h-[440px] bg-gray-800 rounded-[28px] border-[6px] border-gray-700 shadow-xl overflow-hidden z-30"
+                  >
+                    <div
+                      class="absolute top-0 w-full h-6 bg-gray-700 flex justify-center"
+                    >
+                      <div class="w-20 h-5 bg-gray-700 rounded-b-xl"></div>
+                    </div>
+                    <div
+                      class="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 p-3 overflow-y-auto flex flex-col"
+                    >
+                      <div class="text-center pt-3 pb-4">
+                        <h3 class="text-base font-semibold text-gray-200">
+                          AI Voice Call
+                        </h3>
+                        <p class="text-xs text-gray-400">In progress, 2 : 34</p>
+                      </div>
+                      <div
+                        class="flex-grow flex flex-col justify-center items-center space-y-4"
+                      >
+                        <div
+                          class="w-20 h-20 rounded-full custom-bg flex items-center justify-center"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-volume2 h-10 w-10 text-blue-400"
+                          >
+                            <polygon
+                              points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+                            ></polygon>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                          </svg>
+                        </div>
+                        <div class="text-center">
+                          <p class="text-sm font-medium text-gray-200">
+                            Call in progress
+                          </p>
+                          <p class="text-xs text-gray-400">
+                            AI agent is providing information
+                          </p>
+                        </div>
+                      </div>
+                      <div class="mt-auto pt-6 pb-3 flex justify-center">
+                        <button
+                          class="w-10 h-10 rounded-full bg-red-500/80 text-white flex items-center justify-center"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="24px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            fill="#FFFFFF"
+                          >
+                            <path
+                              d="m136-304-92-90q-12-12-12-28t12-28q88-95 203-142.5T480-640q118 0 232.5 47.5T916-450q12 12 12 28t-12 28l-92 90q-11 11-25.5 12t-26.5-8l-116-88q-8-6-12-14t-4-18v-114q-38-12-78-19t-82-7q-42 0-82 7t-78 19v114q0 10-4 18t-12 14l-116 88q-12 9-26.5 8T136-304Zm104-198q-29 15-56 34.5T128-424l40 40 72-56v-62Zm480 2v60l72 56 40-38q-29-26-56-45t-56-33Zm-480-2Zm480 2Z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Floating card 1 -->
+                  <div
+                    class="absolute z-40 w-52 bg-gray-800 border !border-gray-700 rounded-lg p-3 shadow-2xl animate-float -top-8 -left-8 md:-left-32 md:-top-4 -rotate-6"
+                  >
+                    <div class="flex items-center space-x-2 mb-1.5">
+                      <div
+                        class="w-7 h-7 custom-bg rounded-full flex items-center justify-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-file-text w-4 h-4 text-white"
+                        >
+                          <path
+                            d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+                          ></path>
+                          <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                          <path d="M10 9H8"></path>
+                          <path d="M16 13H8"></path>
+                          <path d="M16 17H8"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-xs font-medium text-gray-200">
+                          New Lead
+                        </p>
+                        <p class="text-[10px] text-gray-400">Just now</p>
+                      </div>
+                    </div>
+                    <p class="text-[11px] text-gray-300 mb-1.5">
+                      Lead form submitted. AI agent initiating call...
+                    </p>
+                  </div>
+
+                  <!-- Floating card 2 -->
+                  <div
+                    class="absolute z-40 w-52 bg-gray-800 border !border-gray-700 rounded-lg p-3 shadow-2xl animate-float top-20 -right-8 md:-right-32 rotate-6"
+                  >
+                    <div class="flex items-center space-x-2 mb-1.5">
+                      <div
+                        class="w-7 h-7 custom-bg rounded-full flex items-center justify-center"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          viewBox="0 0 448 512"
+                          class="w-4 h-4 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-xs font-medium text-gray-200">
+                          WhatsApp Update
+                        </p>
+                        <p class="text-[10px] text-gray-400">Just now</p>
+                      </div>
+                    </div>
+                    <p class="text-[11px] text-gray-300 mb-2">
+                      Here's the product information you requested! 📱
+                    </p>
+                    <div class="bg-gray-700 rounded p-1.5 text-[11px]">
+                      <p class="font-medium text-gray-200">
+                        Product-Details.pdf
+                      </p>
+                      <div class="flex justify-between mt-1">
+                        <span class="text-gray-400">2.4 MB</span
+                        ><span class="text-blue-400">Download</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Floating card 3 -->
+                  <div
+                    class="absolute z-40 w-52 bg-gray-800 border !border-gray-700 rounded-lg p-3 shadow-2xl animate-float -bottom-8 -right-8 md:-right-[10rem] -rotate-3 animation-delay-1000"
+                  >
+                    <div class="flex items-center space-x-2 mb-1.5">
+                      <div
+                        class="w-7 h-7 custom-bg rounded-full flex items-center justify-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-credit-card w-4 h-4 text-white"
+                        >
+                          <rect
+                            width="20"
+                            height="14"
+                            x="2"
+                            y="5"
+                            rx="2"
+                          ></rect>
+                          <line x1="2" x2="22" y1="10" y2="10"></line>
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-xs font-medium text-gray-200">
+                          Payment Link
+                        </p>
+                        <p class="text-[10px] text-gray-400">1 min ago</p>
+                      </div>
+                    </div>
+                    <p class="text-[11px] text-gray-300 mb-1.5">
+                      Complete your purchase securely via WhatsApp
+                    </p>
+                    <button
+                      class="w-full custom-bg text-white text-[11px] font-medium py-1.5 px-3 rounded"
+                    >
+                      Pay Now • $299
+                    </button>
+                  </div>
+
+                  <!-- Floating card 4 -->
+                  <div
+                    class="absolute z-40 w-52 bg-gray-800 border !border-gray-700 rounded-lg p-3 shadow-2xl animate-float bottom-24 -left-8 md:-left-[10rem] rotate-3 animation-delay-2000"
+                  >
+                    <div class="flex items-center space-x-2 mb-1.5">
+                      <div
+                        class="w-7 h-7 custom-bg rounded-full flex items-center justify-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-bar-chart3 w-4 h-4 text-white"
+                        >
+                          <path d="M3 3v18h18"></path>
+                          <path d="M18 17V9"></path>
+                          <path d="M13 17V5"></path>
+                          <path d="M8 17v-3"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-xs font-medium text-gray-200">
+                          CRM Updated
+                        </p>
+                        <p class="text-[10px] text-gray-400">2 mins ago</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center text-[11px] text-gray-300">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-check-circle2 w-3.5 h-3.5 mr-1 text-green-500"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9 12 2 2 4-4"></path></svg
+                      ><span>Lead Status: Hot</span>
+                    </div>
+                    <div class="flex items-center text-[11px] text-gray-300">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-check-circle2 w-3.5 h-3.5 mr-1 text-green-500"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9 12 2 2 4-4"></path></svg
+                      ><span>Sentiment: Positive</span>
+                    </div>
+                    <div class="flex items-center text-[11px] text-gray-300">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-check-circle2 w-3.5 h-3.5 mr-1 text-green-500"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9 12 2 2 4-4"></path></svg
+                      ><span>Next Action: Follow-up</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:w-1/2 space-y-5 scale-[0.9]">
+                <h2 class="text-3xl md:text-4xl font-bold">
+                  Omnichannel,End-to-End
+                </h2>
+                <p class="text-lg sub-head-color mt-3">
+                  Customers don't want to repeat themselves — or stay locked in
+                  one channel. Our agent ensures they don't have to.
+                </p>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 custom-bg rounded-xl flex items-center justify-center shadow-lg flex-shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-phone w-6 h-6 text-white"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-1">Starts on voice</h3>
+                    <p class="sub-head-color">
+                      Inbound or outbound calls handled naturally by our AI
+                      agent
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 custom-bg rounded-xl flex items-center justify-center shadow-lg flex-shrink-0"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 448 512"
+                      class="w-6 h-6 text-white"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-1">
+                      Sends info mid-call
+                    </h3>
+                    <p class="sub-head-color">
+                      Product links, images, or documents via WhatsApp or email
+                      during the conversation
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 custom-bg rounded-xl flex items-center justify-center shadow-lg flex-shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-mail w-6 h-6 text-white"
+                    >
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path
+                        d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-1">
+                      Continuous conversation
+                    </h3>
+                    <p class="sub-head-color">
+                      Chat continues after the call on WhatsApp, SMS, or web
+                      messenger
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 custom-bg rounded-xl flex items-center justify-center shadow-lg flex-shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-credit-card w-6 h-6 text-white"
+                    >
+                      <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                      <line x1="2" x2="22" y1="10" y2="10"></line>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-1">
+                      Transact inside chat
+                    </h3>
+                    <p class="sub-head-color">
+                      Payments, bookings, and form submissions handled directly
+                      in the conversation
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 custom-bg rounded-xl flex items-center justify-center shadow-lg flex-shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-repeat w-6 h-6 text-white"
+                    >
+                      <path d="m17 2 4 4-4 4"></path>
+                      <path d="M3 11v-1a4 4 0 0 1 4-4h14"></path>
+                      <path d="m7 22-4-4 4-4"></path>
+                      <path d="M21 13v1a4 4 0 0 1-4 4H3"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-1">
+                      Context stays intact
+                    </h3>
+                    <p class="sub-head-color">
+                      Full conversation history follows the customer across
+                      every channel switch
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- UseCases section -->
+          <section id="use-cases" class="py-20 relative overflow-hidden">
+            <div class="container mx-auto px-4">
+              <h2
+                class="text-center text-3xl md:text-4xl font-bold mb-4 animate-on-scroll"
+              >
+                Use Cases Across Industries
+              </h2>
+              <p
+                class="text-center sub-head-color max-w-2xl mx-auto mb-16 animate-on-scroll"
+              >
+                Our AI voice agent adapts to various industries with specialized
+                workflows
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a
+                  href="https://wa.me/918010545225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] animate-on-scroll"
+                    style="transition-delay: 100ms"
+                  >
+                    <div
+                      class="w-14 h-14 rounded-lg custom-bg flex items-center justify-center mb-4 shadow-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-car w-7 h-7 text-white"
+                      >
+                        <path
+                          d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"
+                        ></path>
+                        <circle cx="7" cy="17" r="2"></circle>
+                        <path d="M9 17h6"></path>
+                        <circle cx="17" cy="17" r="2"></circle>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Automotive</h3>
+                    <ul class="space-y-1">
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Book test drives via voice, confirm on WhatsApp</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Send dealership details mid-call</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Collect documents &amp; verify identity over
+                          chat</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Schedule service appointments across channels</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <a
+                  href="https://wa.me/918010545225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] animate-on-scroll"
+                    style="transition-delay: 100ms"
+                  >
+                    <div
+                      class="w-14 h-14 rounded-lg custom-bg flex items-center justify-center mb-4 shadow-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-hotel w-7 h-7 text-white"
+                      >
+                        <path
+                          d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"
+                        ></path>
+                        <path
+                          d="m9 16 .348-.24c1.465-1.013 3.84-1.013 5.304 0L15 16"
+                        ></path>
+                        <path d="M8 7h.01"></path>
+                        <path d="M16 7h.01"></path>
+                        <path d="M12 7h.01"></path>
+                        <path d="M12 11h.01"></path>
+                        <path d="M16 11h.01"></path>
+                        <path d="M8 11h.01"></path>
+                        <path d="M10 22v-6.5m4 0V22"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Hospitality</h3>
+                    <ul class="space-y-1">
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Take room bookings on calls, send confirmation
+                          links</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Handle check-in requirements via WhatsApp</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Collect preferences before arrival</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Send digital room keys and property information</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <a
+                  href="https://wa.me/918010545225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] animate-on-scroll"
+                    style="transition-delay: 100ms"
+                  >
+                    <div
+                      class="w-14 h-14 rounded-lg custom-bg flex items-center justify-center mb-4 shadow-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-wallet w-7 h-7 text-white"
+                      >
+                        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
+                        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
+                        <path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">
+                      Banking &amp; Financial Services
+                    </h3>
+                    <ul class="space-y-1">
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Assist with loan applications and eligibility over
+                          calls</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Guide through application process via WhatsApp</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Auto-fill forms or send payment links</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Enable balance inquiry and transaction history via
+                          voice</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <a
+                  href="https://wa.me/918010545225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] animate-on-scroll"
+                    style="transition-delay: 100ms"
+                  >
+                    <div
+                      class="w-14 h-14 rounded-lg custom-bg flex items-center justify-center mb-4 shadow-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-shield-check w-7 h-7 text-white"
+                      >
+                        <path
+                          d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                        ></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Insurance</h3>
+                    <ul class="space-y-1">
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Share instant quotes via voice or chat</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Collect KYC documents securely over WhatsApp</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Provide instant claim status updates via voice</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Automate reminders for premium payments</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <a
+                  href="https://wa.me/918010545225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] animate-on-scroll"
+                    style="transition-delay: 100ms"
+                  >
+                    <div
+                      class="w-14 h-14 rounded-lg custom-bg flex items-center justify-center mb-4 shadow-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-shopping-bag w-7 h-7 text-white"
+                      >
+                        <path
+                          d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"
+                        ></path>
+                        <path d="M3 6h18"></path>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">E-commerce</h3>
+                    <ul class="space-y-1">
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Provide order support over multiple channels</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Send product recommendations with images</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Process returns with cross-channel verification</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Recover abandoned carts via WhatsApp follow-ups</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <a
+                  href="https://wa.me/918010545225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] animate-on-scroll"
+                    style="transition-delay: 100ms"
+                  >
+                    <div
+                      class="w-14 h-14 rounded-lg custom-bg flex items-center justify-center mb-4 shadow-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-heart w-7 h-7 text-white"
+                      >
+                        <path
+                          d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Healthcare</h3>
+                    <ul class="space-y-1">
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Schedule appointments via voice or chat</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Collect &amp; verify insurance information</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Send pre-appointment instructions via email</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Handle prescription refill requests
+                          cross-channel</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <a
+                  href="https://wa.me/918010545225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] animate-on-scroll"
+                    style="transition-delay: 100ms"
+                  >
+                    <div
+                      class="w-14 h-14 rounded-lg custom-bg flex items-center justify-center mb-4 shadow-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-briefcase w-7 h-7 text-white"
+                      >
+                        <rect
+                          width="20"
+                          height="14"
+                          x="2"
+                          y="7"
+                          rx="2"
+                          ry="2"
+                        ></rect>
+                        <path
+                          d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">SaaS &amp; B2B</h3>
+                    <ul class="space-y-1">
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Schedule demos from calls to calendar links</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Send pricing documents mid-conversation</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Qualify leads across multiple touchpoints</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Deploy custom onboarding sequences via email</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <a
+                  href="https://wa.me/918010545225"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] animate-on-scroll"
+                    style="transition-delay: 100ms"
+                  >
+                    <div
+                      class="w-14 h-14 rounded-lg custom-bg flex items-center justify-center mb-4 shadow-lg"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-building2 w-7 h-7 text-white"
+                      >
+                        <path
+                          d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"
+                        ></path>
+                        <path
+                          d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"
+                        ></path>
+                        <path
+                          d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"
+                        ></path>
+                        <path d="M10 6h4"></path>
+                        <path d="M10 10h4"></path>
+                        <path d="M10 14h4"></path>
+                        <path d="M10 18h4"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Real Estate</h3>
+                    <ul class="space-y-1">
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Schedule site visits from voice interaction</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Send property brochures and location maps via
+                          WhatsApp</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Collect buyer preferences via chat forms</span
+                        >
+                      </li>
+                      <li class="flex items-center space-x-2">
+                        <span class="mt-1">•</span
+                        ><span class="sub-head-color text-sm"
+                          >Connect to agents automatically</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+                <div
+                  class="border border-gray-800 rounded-xl p-6 flex items-center justify-center animate-on-scroll"
+                  style="transition-delay: 100ms"
+                >
+                  <div class="text-center">
+                    <p class="text-xl font-semibold mb-3">
+                      Custom Industry Solution
+                    </p>
+                    <p class="sub-head-color mb-4">
+                      Need a solution for your specific industry?
+                    </p>
+                    <a
+                      href="https://wa.me/918010545225"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="auth-btn auth-custom-btn"
+                      >Contact Us</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Team Trust section -->
+          <section class="py-20 relative overflow-hidden custom-bg">
+            <div class="container mx-auto px-4">
+              <h2
+                class="text-light text-center text-3xl md:text-4xl font-bold mb-4"
+              >
+                Why Teams Trust Our AI Agent
+              </h2>
+              <p class="text-center sub-head-color max-w-2xl mx-auto mb-10">
+                Built with enterprise-grade capabilities for businesses of all
+                sizes
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                  class="bg-gray-800 border-[0.5px] border-gray-700 backdrop-blur-sm rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                  style="transition-delay: 0ms"
+                >
+                  <div
+                    class="w-16 h-16 rounded-full custom-bg flex items-center justify-center mb-6 mx-auto shadow-lg"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-globe w-8 h-8 text-white"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path
+                        d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
+                      ></path>
+                      <path d="M2 12h20"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl text-light font-semibold text-center mb-3">
+                    Multilingual
+                  </h3>
+                  <p class="sub-head-color text-center">
+                    Speaks fluently in English, Hindi, Hinglish, and can be
+                    trained on other languages for your market.
+                  </p>
+                </div>
+                <div
+                  class="bg-gray-800 border-[0.5px] border-gray-700 backdrop-blur-sm rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                  style="transition-delay: 100ms"
+                >
+                  <div
+                    class="w-16 h-16 rounded-full custom-bg flex items-center justify-center mb-6 mx-auto shadow-lg"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-brain w-8 h-8 text-white"
+                    >
+                      <path
+                        d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+                      ></path>
+                      <path
+                        d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"
+                      ></path>
+                      <path
+                        d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"
+                      ></path>
+                      <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
+                      <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                      <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                      <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
+                      <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                      <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl text-light font-semibold text-center mb-3">
+                    Memory-Aware
+                  </h3>
+                  <p class="sub-head-color text-center">
+                    Remembers past interactions and customer preferences across
+                    sessions and channels.
+                  </p>
+                </div>
+                <div
+                  class="bg-gray-800 border-[0.5px] border-gray-700 backdrop-blur-sm rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                  style="transition-delay: 200ms"
+                >
+                  <div
+                    class="w-16 h-16 rounded-full custom-bg flex items-center justify-center mb-6 mx-auto shadow-lg"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-lock w-8 h-8 text-white"
+                    >
+                      <rect
+                        width="18"
+                        height="11"
+                        x="3"
+                        y="11"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl text-light font-semibold text-center mb-3">
+                    Secure &amp; Compliant
+                  </h3>
+                  <p class="sub-head-color text-center">
+                    Built with GDPR, HIPAA, and SOC 2 compliance in mind for
+                    enterprise security needs.
+                  </p>
+                </div>
+                <div
+                  class="bg-gray-800 border-[0.5px] border-gray-700 backdrop-blur-sm rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                  style="transition-delay: 300ms"
+                >
+                  <div
+                    class="w-16 h-16 rounded-full custom-bg flex items-center justify-center mb-6 mx-auto shadow-lg"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-workflow w-8 h-8 text-white"
+                    >
+                      <rect width="8" height="8" x="3" y="3" rx="2"></rect>
+                      <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
+                      <rect width="8" height="8" x="13" y="13" rx="2"></rect>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl text-light font-semibold text-center mb-3">
+                    API-First Architecture
+                  </h3>
+                  <p class="sub-head-color text-center">
+                    Easily integrate with any system using our comprehensive API
+                    and webhook system.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-12 relative">
+                <div
+                  class="bg-gray-800 border-[0.5px] border-gray-700 rounded-xl p-8 md:p-10 relative z-10"
+                >
+                  <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="md:w-1/2 space-y-4">
+                      <h3 class="text-2xl md:text-3xl font-bold text-light">
+                        Train Once, Deploy Everywhere
+                      </h3>
+                      <p class="text-lg text-gray-300">
+                        Our omnichannel architecture means you train your AI
+                        agent once, and it works across all channels - voice,
+                        chat, email, and more.
+                      </p>
+                      <ul class="space-y-2 sub-head-color">
+                        <li class="flex items-center gap-2">
+                          <span class="text-light">✓</span
+                          ><span
+                            >No need for separate bots for different
+                            channels</span
+                          >
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <span class="text-light">✓</span
+                          ><span
+                            >Context follows customers across channel
+                            switches</span
+                          >
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <span class="text-light">✓</span
+                          ><span
+                            >Consistent brand voice and customer
+                            experience</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                      <div class="p-4 rounded-lg text-center">
+                        <div
+                          class="w-12 h-12 custom-bg rounded-full flex items-center justify-center mx-auto mb-3"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-phone w-6 h-6 text-white"
+                          >
+                            <path
+                              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <p class="text-gray-300 font-medium">Voice Calls</p>
+                      </div>
+                      <div class="p-4 rounded-lg text-center">
+                        <div
+                          class="w-12 h-12 custom-bg rounded-full flex items-center justify-center mx-auto mb-3"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-message-square w-6 h-6 text-white"
+                          >
+                            <path
+                              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <p class="text-gray-300 font-medium">WhatsApp</p>
+                      </div>
+                      <div class="p-4 rounded-lg text-center">
+                        <div
+                          class="w-12 h-12 custom-bg rounded-full flex items-center justify-center mx-auto mb-3"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-mail w-6 h-6 text-white"
+                          >
+                            <rect
+                              width="20"
+                              height="16"
+                              x="2"
+                              y="4"
+                              rx="2"
+                            ></rect>
+                            <path
+                              d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                            ></path>
+                          </svg>
+                        </div>
+                        <p class="text-gray-300 font-medium">Email</p>
+                      </div>
+                      <div class="p-4 rounded-lg text-center">
+                        <div
+                          class="w-12 h-12 custom-bg rounded-full flex items-center justify-center mx-auto mb-3"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-message-circle w-6 h-6 text-white"
+                          >
+                            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                          </svg>
+                        </div>
+                        <p class="text-gray-300 font-medium">Web Chat</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute -top-10 -left-10 w-60 h-60 bg-cyan-500/10 rounded-full blur-[80px] -z-10"
+                ></div>
+                <div
+                  class="absolute -bottom-10 -right-10 w-60 h-60 bg-violet-600/10 rounded-full blur-[80px] -z-10"
+                ></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Business Use case -->
+          <section class="py-20 relative overflow-hidden">
+            <div class="container mx-auto px-4">
+              <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2 scale-[0.9]">
+                  <h2
+                    class="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll"
+                  >
+                    Your Business Use Case
+                  </h2>
+                  <p class="text-lg sub-head-color mt-3 mb-4 animate-on-scroll">
+                    Our AI voice agent doesn't just follow generic scripts. It's
+                    customized to match your exact industry needs, business
+                    processes, and customer expectations.
+                  </p>
+                  <div class="space-y-6 mt-2">
+                    <div class="flex items-center gap-4 animate-on-scroll">
+                      <div
+                        class="w-12 h-12 custom-bg rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-settings w-6 h-6 text-white"
+                        >
+                          <path
+                            d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                          ></path>
+                          <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Tailored Conversation Flows
+                        </h3>
+                        <p class="text-gray-400">
+                          Custom scripts and workflows designed for your
+                          specific industry requirements and customer journeys
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4 animate-on-scroll">
+                      <div
+                        class="w-12 h-12 custom-bg rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-file-text w-6 h-6 text-white"
+                        >
+                          <path
+                            d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+                          ></path>
+                          <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                          <path d="M10 9H8"></path>
+                          <path d="M16 13H8"></path>
+                          <path d="M16 17H8"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Industry-Specific Knowledge
+                        </h3>
+                        <p class="text-gray-400">
+                          Pre-built knowledge base with terminology, FAQs, and
+                          processes relevant to your business domain
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4 animate-on-scroll">
+                      <div
+                        class="w-12 h-12 custom-bg rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-users w-6 h-6 text-white"
+                        >
+                          <path
+                            d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                          ></path>
+                          <circle cx="9" cy="7" r="4"></circle>
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Personalized Onboarding
+                        </h3>
+                        <p class="text-gray-400">
+                          White-glove setup by specialists who understand your
+                          business model and integration requirements
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4 animate-on-scroll">
+                      <div
+                        class="w-12 h-12 custom-bg rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-line-chart w-6 h-6 text-white"
+                        >
+                          <path d="M3 3v18h18"></path>
+                          <path d="m19 9-5 5-4-4-3 3"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Custom Analytics Dashboard
+                        </h3>
+                        <p class="text-gray-400">
+                          Track KPIs that matter to your business with
+                          dashboards built around your specific goals
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lg:w-1/2 scale-[0.95]">
+                  <div class="relative">
+                    <div
+                      class="bg-gray-900 border border-gray-800 rounded-xl p-5 shadow-xl animate-on-scroll"
+                    >
+                      <div class="flex space-x-3 mb-5">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                      </div>
+                      <div class="space-y-6">
+                        <div class="bg-gray-800 rounded-lg p-4">
+                          <div class="flex justify-between items-center mb-4">
+                            <h4 class="font-medium text-white">
+                              Automotive Industry Workflow
+                            </h4>
+                            <span
+                              class="bg-buc text-buc border-buc text-xs px-2 py-1 rounded"
+                              >Active</span
+                            >
+                          </div>
+                          <div class="space-y-3">
+                            <div
+                              class="flex items-center space-x-3 p-2 bg-gray-700/50 rounded-md"
+                            >
+                              <div
+                                class="w-6 h-6 bg-buc text-buc rounded flex items-center justify-center flex-shrink-0"
+                              >
+                                <span class="text-xs">1</span>
+                              </div>
+                              <span class="text-sm text-gray-300"
+                                >Inbound call handling</span
+                              >
+                            </div>
+                            <div
+                              class="flex items-center space-x-3 p-2 bg-gray-700/50 rounded-md"
+                            >
+                              <div
+                                class="w-6 h-6 bg-buc text-buc rounded flex items-center justify-center flex-shrink-0"
+                              >
+                                <span class="text-xs">2</span>
+                              </div>
+                              <span class="text-sm text-gray-300"
+                                >Test drive scheduling</span
+                              >
+                            </div>
+                            <div
+                              class="flex items-center space-x-3 p-2 bg-gray-700/50 rounded-md"
+                            >
+                              <div
+                                class="w-6 h-6 bg-buc text-buc rounded flex items-center justify-center flex-shrink-0"
+                              >
+                                <span class="text-xs">3</span>
+                              </div>
+                              <span class="text-sm text-gray-300"
+                                >Document collection via WhatsApp</span
+                              >
+                            </div>
+                            <div
+                              class="flex items-center space-x-3 p-2 bg-gray-700/50 rounded-md"
+                            >
+                              <div
+                                class="w-6 h-6 bg-buc text-buc rounded flex items-center justify-center flex-shrink-0"
+                              >
+                                <span class="text-xs">4</span>
+                              </div>
+                              <span class="text-sm text-gray-300"
+                                >Dealership directions via email</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="bg-gray-800 rounded-lg p-4">
+                          <div class="flex justify-between mb-3">
+                            <h4 class="font-medium text-white">
+                              Customized Car Models
+                            </h4>
+                            <button class="text-buc text-sm">Edit</button>
+                          </div>
+                          <div class="grid grid-cols-3 gap-2">
+                            <div
+                              class="bg-gray-700/50 p-2 rounded-md text-xs text-center text-gray-300"
+                            >
+                              SUV Series
+                            </div>
+                            <div
+                              class="bg-gray-700/50 p-2 rounded-md text-xs text-center text-gray-300"
+                            >
+                              Sedan Series
+                            </div>
+                            <div
+                              class="bg-gray-700/50 p-2 rounded-md text-xs text-center text-gray-300"
+                            >
+                              EV Models
+                            </div>
+                            <div
+                              class="bg-gray-700/50 p-2 rounded-md text-xs text-center text-gray-300"
+                            >
+                              Hybrid
+                            </div>
+                            <div
+                              class="bg-gray-700/50 p-2 rounded-md text-xs text-center text-gray-300"
+                            >
+                              Luxury
+                            </div>
+                            <div
+                              class="bg-buc text-buc p-2 rounded-md text-xs text-center"
+                            >
+                              + Add New
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute -bottom-5 -right-5 w-60 h-60 bg-cyan-500/10 rounded-full blur-[80px] -z-10"
+                    ></div>
+                    <div
+                      class="absolute -top-5 -left-5 w-60 h-60 bg-violet-600/10 rounded-full blur-[80px] -z-10"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- footer section -->
+        <div class="contact_section" id="contact_sec">
+          <div class="contact_card">
+            <h1>Launch in Days,<br />Scale in Weeks</h1>
+            <p>
+              No heavy dev time needed. We help you go live with pre-built flows
+              for voice, chat, and email, full CRM/LMS integration, and
+              post-launch analytics and optimization.
+            </p>
+            <div class="row w-full md:w-3/4 mb-4">
+              <div class="col-md-4">
+                <div
+                  class="card flex flex-col items-center p-4 rounded-xl bg-gray-800 border-[0.5px] border-gray-700"
+                >
+                  <h5 class="text-light mb-2">Quick Setup</h5>
+                  <p class="m-0 sub-head-color w-100">
+                    Go live in days with pre-built templates and white-glove
+                    onboarding
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="card flex flex-col items-center p-4 rounded-xl bg-gray-800 border-[0.5px] border-gray-700"
+                >
+                  <h5 class="text-light mb-2">Easy Integration</h5>
+                  <p class="m-0 sub-head-color w-100">
+                    Connect with your existing systems without heavy coding
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="card flex flex-col items-center p-4 rounded-xl bg-gray-800 border-[0.5px] border-gray-700"
+                >
+                  <h5 class="text-light mb-2">Full Support</h5>
+                  <p class="m-0 sub-head-color w-100">
+                    Dedicated success team to optimize performance after launch
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="auth-btn mt-3">Book a call</a>
+          </div>
+
+          <div class="main_contact">
+            <div class="row">
+              <div class="col-md-4 mb-4 mb-md-0">
+                <p class="mb-2 mb-md-3">Subscribe to our newsletter</p>
+                <div class="form_box">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="name@example.com"
+                  />
+                  <a href="#" class="auth-btn">Book a call</a>
+                </div>
+              </div>
+              <div class="col-md-3 mb-4 mb-md-0 flex_box">
+                <div class="linkz">
+                  <h6>Menu</h6>
+                  <p><a href="#">Home</a></p>
+                  <p><a href="#">About</a></p>
+                  <p><a href="#">Ventures</a></p>
+                  <p><a href="#">Contact</a></p>
+                </div>
+              </div>
+              <div class="col-md-3 flex_box align-items-start">
+                <div class="linkz">
+                  <h6>Follow Us</h6>
+                  <p><a href="#">X / Twitter </a></p>
+                  <p><a href="#">Linkedin</a></p>
+                  <p><a href="#">Instagram</a></p>
+                </div>
+              </div>
+              <div class="col-md-2 d-none d-md-block">
+                <div class="btn_box">
+                  <a href="#home_sec">
+                    <i class="fa fa-chevron-up"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="copyright mb-2 mb-md-3">
+            <p>© Aura lan Labs 2025.</p>
+            <p>All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tailwind css CDN here -->
+    <script>
+      function updateNavbar() {
+        const navbar = document.querySelector(".navbar_sec");
+        const firstSectionHeight =
+          document.querySelector(".home_section").offsetHeight;
+
+        if (window.scrollY >= firstSectionHeight - 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      }
+      function updateNavbar() {
+        const navbar = document.querySelector(".navbar_sec");
+        const firstSectionHeight = document.querySelector("#hero").offsetHeight;
+
+        if (window.scrollY >= firstSectionHeight - 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      }
+      // Run on scroll
+      window.addEventListener("scroll", updateNavbar);
+      // Run once when page loads
+      window.addEventListener("load", updateNavbar);
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- -------GSAP CDN------- -->
+    <script src="./assets/js/SplitText3.min.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- -------SPLINE CDN------- -->
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.10.67/build/spline-viewer.js"
+    ></script>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
