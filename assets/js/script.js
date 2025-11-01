@@ -179,3 +179,30 @@ elements.forEach((element) => {
     element.classList.remove("play");
   });
 });
+
+
+// ----------contact section-------------
+
+  document.getElementById("whatsappBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById("emailInput").value.trim();
+    const whatsappNumber = "918249898410"; // your WhatsApp number without '+'
+
+    // Simple email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Message to send
+    const message = `Hello, this is ${email}. I would like to get in touch!`;
+
+    // WhatsApp URL (works on mobile & desktop)
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp chat
+    window.open(whatsappURL, "_blank");
+  });
