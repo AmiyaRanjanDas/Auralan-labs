@@ -816,7 +816,7 @@ html {
 
 .accordian_section .content {
   display: flex;
-  width: 60%;
+  width: 80%;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
@@ -847,9 +847,7 @@ html {
   text-align: left;
   background: none;
 }
-.fLink span {
-  font-family: "Lato", sans-serif;
-}
+
 .fLink:after {
   position: absolute;
   content: "+";
@@ -867,7 +865,7 @@ html {
 
 .fLink:hover .letter,
 .fLink.play .letter {
-  transform: translateY(-100%);
+  transform: translateY(-110%);
 }
 
 .fLink .blocks:last-child {
@@ -877,6 +875,7 @@ html {
 }
 
 .fLink .letter {
+  font-family: "Lato", sans-serif !important;
   display: inline-block;
   transition: transform 0.6s cubic-bezier(0.075, 0, 0.24, 1);
 }
@@ -1041,18 +1040,34 @@ html {
   transition-delay: 1.17s;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 992px) {
+  .accordian_section .content {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .fLink {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}
+@media only screen and (max-width: 552px) {
   .accordian_section {
     position: relative;
     padding: 50px 0 70px;
   }
-
-  .accordian_section .content {
-    width: 95%;
-  }
-
   .fLink {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .fLink {
+    font-size: 1.1rem;
+    -webkit-text-stroke-width: 0px;
+    color: var(--primary_color);
+  }
+  .fLink .blocks:last-child {
+    color: black;
   }
 }
 
@@ -1119,10 +1134,15 @@ html {
   text-align: right;
 }
 .main_contact .btn_box a {
+      display: ruby;
   background: linear-gradient(45deg, black, var(--primary_color));
   color: white;
-  padding: 6px 10px 10px;
+  padding: 10px 4px 14px;
   border-radius: 50%;
+}
+.main_contact .btn_box a svg{
+  height: 35px;
+  fill: white;
 }
 .contact_section .copyright {
   margin: 60px 50px 0;
@@ -1189,27 +1209,32 @@ html {
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
-.sub-head-color{
+.sub-head-color {
   color: var(--subhead-color);
 }
-.custom-bg{
-    background: linear-gradient(45deg,var(--primary_color),black);
+.custom-bg {
+  background: linear-gradient(45deg, var(--primary_color), black);
 }
-.auth-custom-btn{
-    background: linear-gradient(45deg,rgba(12, 35, 94, 0.7),black);
-    color: white;
+.auth-custom-btn {
+  background: linear-gradient(45deg, rgba(12, 35, 94, 0.7), black);
+  color: white;
 }
 .auth-custom-btn:hover {
-    background: linear-gradient(45deg,rgba(13, 27, 62, 0.7),rgba(0, 0, 0, 0.7));
+  background: linear-gradient(45deg, rgba(13, 27, 62, 0.7), rgba(0, 0, 0, 0.7));
 }
 /* ----Business use case section--=- */
-.bg-buc{
-    background: linear-gradient(45deg,var(--primary_color),var(--primary_color),black);
-    border: 0.5px solid rgba(255, 255, 255, 0.4);
-} 
-.border-buc{
-     border: 0.5px solid rgb(96 165 250 / var(--tw-text-opacity, 1));
+.bg-buc {
+  background: linear-gradient(
+    45deg,
+    var(--primary_color),
+    var(--primary_color),
+    black
+  );
+  border: 0.5px solid rgba(255, 255, 255, 0.4);
 }
-.text-buc{
+.border-buc {
+  border: 0.5px solid rgb(96 165 250 / var(--tw-text-opacity, 1));
+}
+.text-buc {
   color: rgb(96 165 250 / var(--tw-text-opacity, 1));
 }
