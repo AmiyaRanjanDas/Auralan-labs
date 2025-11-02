@@ -121,6 +121,7 @@ html {
   list-style: none;
   gap: 30px;
   margin: 0;
+  padding: 0;
 }
 
 /* Base state */
@@ -215,7 +216,7 @@ html {
   }
 
   /* Expandable dropdown */
-  .dropdown.active .navbar_sec .dropdown-menu {
+  .dropdown.active .dropdown-menu {
     display: flex;
     flex-direction: column;
   }
@@ -274,7 +275,6 @@ html {
     justify-content: space-between;
     gap: 0;
   }
-
   .navbar_sec .nav-center {
     gap: 20px;
   }
@@ -282,8 +282,10 @@ html {
   .nav_links {
     display: none;
     position: absolute;
+    width: 110%;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     right: 0;
     background: rgba(26, 26, 26, 0.95);
     flex-direction: column;
@@ -475,7 +477,7 @@ html {
 }
 
 .home_section .spline_model {
-  top: 100px;
+  top: 50px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -712,13 +714,13 @@ html {
   padding: 50px;
 }
 #venture_1 {
-  background: url("../../images/img1.webp");
+  background: url("../../images/img_1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #venture_2 {
-  background: url("../../images/img2.jpg");
+  background: url("../../images/img_2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1058,6 +1060,7 @@ html {
   }
   .fLink {
     font-size: 1.4rem;
+    padding: 0.4vh 0;
   }
 }
 @media only screen and (max-width: 440px) {
@@ -1134,13 +1137,13 @@ html {
   text-align: right;
 }
 .main_contact .btn_box a {
-      display: ruby;
+  display: ruby;
   background: linear-gradient(45deg, black, var(--primary_color));
   color: white;
   padding: 10px 4px 14px;
   border-radius: 50%;
 }
-.main_contact .btn_box a svg{
+.main_contact .btn_box a svg {
   height: 35px;
   fill: white;
 }

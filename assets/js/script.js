@@ -30,13 +30,18 @@ window.addEventListener("scroll", updateActiveNav);
 const menuToggle = document.getElementById("menuToggle");
 const navLinksContainer = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click", () => {
+menuToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
   navLinksContainer.classList.toggle("active");
 });
 
-// Close mobile menu when clicking on a link
+// Close mobile menu when clicking on a link (but not dropdown parent links)
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
+    // Don't close if it's a dropdown parent in mobile
+    if (link.parentElement.classList.contains('dropdown') && window.innerWidth <= 768) {
+      return;
+    }
     navLinksContainer.classList.remove("active");
   });
 });
@@ -45,6 +50,8 @@ navLinks.forEach((link) => {
 document.addEventListener("click", (e) => {
   if (!menuToggle.contains(e.target) && !navLinksContainer.contains(e.target)) {
     navLinksContainer.classList.remove("active");
+    // Close all dropdowns
+    dropdowns.forEach(dd => dd.classList.remove("active"));
   }
 });
 
@@ -52,18 +59,33 @@ document.addEventListener("click", (e) => {
 const dropdowns = document.querySelectorAll(".dropdown");
 
 dropdowns.forEach((dropdown) => {
-  dropdown.addEventListener("click", (e) => {
+  const dropdownLink = dropdown.querySelector("a");
+  
+  dropdownLink.addEventListener("click", (e) => {
     if (window.innerWidth <= 768) {
       e.preventDefault();
+      e.stopPropagation(); // Prevent the event from bubbling up
+      
+      // Close other dropdowns
+      dropdowns.forEach(dd => {
+        if (dd !== dropdown) dd.classList.remove("active");
+      });
+      
+      // Toggle current dropdown
       dropdown.classList.toggle("active");
     }
   });
 });
 
+// Close navbar when clicking dropdown menu items
+document.querySelectorAll(".dropdown-menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinksContainer.classList.remove("active");
+    dropdowns.forEach(dd => dd.classList.remove("active"));
+  });
+});
 
-
-
-// GSAP Tween stack Animation 
+// GSAP Tween stack Animation
 window.addEventListener("load", () => {
   const tl = gsap.timeline();
 
@@ -76,7 +98,6 @@ window.addEventListener("load", () => {
     stagger: 0.2,
   });
 });
-
 
 // --------------------About section------------------
 // Make sure GSAP + SplitText + ScrollTrigger are loaded
@@ -180,29 +201,40 @@ elements.forEach((element) => {
   });
 });
 
-
 // ----------contact section-------------
+document.getElementById("whatsappBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+  const email = document.getElementById("emailInput").value.trim();
+  const whatsappNumber = "917656808372"; // your WhatsApp number without '+'
+  // Simple email validation
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+  // Message to send
+  const message = `Hello, this is ${email}. I would like to get in touch!`;
+  // WhatsApp URL (works on mobile & desktop)
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    message
+  )}`;
+  // Open WhatsApp chat
+  window.open(whatsappURL, "_blank");
+  // ✅ Clear input field after success
+  emailInput.value = "";
+});
 
-  document.getElementById("whatsappBtn").addEventListener("click", function (e) {
+
+// ------book a call --> Go to whatsapp-----
+document.querySelectorAll(".book-call").forEach(btn => {
+  btn.addEventListener("click", function (e) {
     e.preventDefault();
 
-    const email = document.getElementById("emailInput").value.trim();
-    const whatsappNumber = "918249898410"; // your WhatsApp number without '+'
+    const whatsappNumber = "917656808372";
+    const message = `Hello, I’d like to book a call to discuss my business requirements with your team. Please let me know a suitable time to connect.`;
 
-    // Simple email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailPattern.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-    // Message to send
-    const message = `Hello, this is ${email}. I would like to get in touch!`;
-
-    // WhatsApp URL (works on mobile & desktop)
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-    // Open WhatsApp chat
     window.open(whatsappURL, "_blank");
   });
+});
+ 
